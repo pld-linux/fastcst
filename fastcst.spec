@@ -4,18 +4,19 @@
 Summary:	Fast Changeset Tool
 Summary(pl):	Fast Changeset Tool - narzêdzie do zestawów zmian
 Name:		fastcst
-Version:	0.5.2
+Version:	0.6.5
 Release:	1
 License:	GPL
 Group:		Development/Languages
 Source0:	http://www.zedshaw.com/projects/fastcst/%{name}-%{version}.tar.bz2
-# Source0-md5:	c5f11c44c7290131b3569bf32a80b89e
+# Source0-md5:	6efc500b9692eb4f70b9e28fe96ddb33
 URL:		http://www.zedshaw.com/projects/fastcst/
 BuildRequires:	ruby
 BuildRequires:	ruby-devel
 Requires:	ruby
 Requires:	ruby-RMail
 Requires:	ruby-pluginfactory
+Requires:	ruby-guid
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -29,7 +30,6 @@ Szybkie narzêdzie do zestawów zmian oparte na drzewie przyrostków
 %setup -q
 
 %build
-rm lib/pluginfactory.rb
 
 ruby setup.rb config \
 	--rbdir=%{ruby_rubylibdir} \
@@ -56,7 +56,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc README* rdoc
 %attr(755,root,root) %{_bindir}/fcst
 %attr(755,root,root) %{ruby_archdir}/suffix_array.so
-%{ruby_rubylibdir}/guid.rb
 %{ruby_rubylibdir}/sadelta.rb
 %{ruby_rubylibdir}/fastcst
 %{ruby_ridir}/*
