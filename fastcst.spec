@@ -2,6 +2,7 @@
 %define ruby_rubylibdir %(ruby -r rbconfig -e 'print Config::CONFIG["rubylibdir"]')
 %define	ruby_archdir	%(ruby -r rbconfig -e 'print Config::CONFIG["archdir"]')
 Summary:	Fast Changeset Tool
+Summary(pl):	Fast Changeset Tool - narzêdzie do zestawów zmian
 Name:		fastcst
 Version:	0.5.2
 Release:	1
@@ -13,18 +14,21 @@ URL:		http://www.zedshaw.com/projects/fastcst/
 BuildRequires:	ruby
 BuildRequires:	ruby-devel
 Requires:	ruby
-Requires: ruby-RMail
-Requires: ruby-pluginfactory
+Requires:	ruby-RMail
+Requires:	ruby-pluginfactory
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 A fast suffix-tree based changeset tool.
 
+%description -l pl
+Szybkie narzêdzie do zestawów zmian oparte na drzewie przyrostków
+(suffiksów).
+
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q
 
 %build
-
 rm lib/pluginfactory.rb
 
 ruby setup.rb config \
