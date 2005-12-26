@@ -1,6 +1,3 @@
-%define	ruby_ridir	%(ruby -r rbconfig -e 'include Config; print File.join(CONFIG["datadir"], "ri", CONFIG["ruby_version"], "system")')
-%define ruby_rubylibdir %(ruby -r rbconfig -e 'print Config::CONFIG["rubylibdir"]')
-%define	ruby_archdir	%(ruby -r rbconfig -e 'print Config::CONFIG["archdir"]')
 Summary:	Fast Changeset Tool
 Summary(pl):	Fast Changeset Tool - narzêdzie do zestawów zmian
 Name:		fastcst
@@ -11,12 +8,13 @@ Group:		Development/Languages
 Source0:	http://www.zedshaw.com/projects/fastcst/%{name}-%{version}.tar.bz2
 # Source0-md5:	6efc500b9692eb4f70b9e28fe96ddb33
 URL:		http://www.zedshaw.com/projects/fastcst/
+BuildRequires:	rpmbuild(macros) >= 1.272
 BuildRequires:	ruby
 BuildRequires:	ruby-devel
 Requires:	ruby
 Requires:	ruby-RMail
-Requires:	ruby-pluginfactory
 Requires:	ruby-guid
+Requires:	ruby-pluginfactory
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -30,7 +28,6 @@ Szybkie narzêdzie do zestawów zmian oparte na drzewie przyrostków
 %setup -q
 
 %build
-
 ruby setup.rb config \
 	--rbdir=%{ruby_rubylibdir} \
 	--sodir=%{ruby_archdir}
@@ -45,7 +42,6 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{ruby_rubylibdir},%{ruby_ridir}}
 
 ruby setup.rb install --prefix=$RPM_BUILD_ROOT
-
 cp -a ri/ri/* $RPM_BUILD_ROOT%{ruby_ridir}
 
 %clean
