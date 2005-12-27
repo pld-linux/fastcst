@@ -2,19 +2,19 @@ Summary:	Fast Changeset Tool
 Summary(pl):	Fast Changeset Tool - narzêdzie do zestawów zmian
 Name:		fastcst
 Version:	0.6.5
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages
 Source0:	http://www.zedshaw.com/projects/fastcst/%{name}-%{version}.tar.bz2
 # Source0-md5:	6efc500b9692eb4f70b9e28fe96ddb33
 URL:		http://www.zedshaw.com/projects/fastcst/
 BuildRequires:	rpmbuild(macros) >= 1.272
-BuildRequires:	ruby
-BuildRequires:	ruby-devel
-Requires:	ruby
-Requires:	ruby-RMail
-Requires:	ruby-guid
-Requires:	ruby-pluginfactory
+BuildRequires:	ruby-modules
+BuildRequires:	ruby-modules-devel
+Requires:	ruby-modules
+Requires:	ruby-modules-RMail
+Requires:	ruby-modules-guid
+Requires:	ruby-modules-pluginfactory
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
