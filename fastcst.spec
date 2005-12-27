@@ -9,12 +9,10 @@ Source0:	http://www.zedshaw.com/projects/fastcst/%{name}-%{version}.tar.bz2
 # Source0-md5:	6efc500b9692eb4f70b9e28fe96ddb33
 URL:		http://www.zedshaw.com/projects/fastcst/
 BuildRequires:	rpmbuild(macros) >= 1.272
-BuildRequires:	ruby-modules
-BuildRequires:	ruby-modules-devel
-Requires:	ruby-modules
-Requires:	ruby-modules-RMail
-Requires:	ruby-modules-guid
-Requires:	ruby-modules-pluginfactory
+BuildRequires:	ruby-devel
+Requires:	ruby-RMail
+Requires:	ruby-guid
+Requires:	ruby-pluginfactory
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
