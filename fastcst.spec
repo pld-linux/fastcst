@@ -8,11 +8,12 @@ Group:		Development/Languages
 Source0:	http://www.zedshaw.com/projects/fastcst/%{name}-%{version}.tar.bz2
 # Source0-md5:	6efc500b9692eb4f70b9e28fe96ddb33
 URL:		http://www.zedshaw.com/projects/fastcst/
-BuildRequires:	rpmbuild(macros) >= 1.272
+BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	ruby-devel
 Requires:	ruby-RMail
 Requires:	ruby-guid
 Requires:	ruby-pluginfactory
+%ruby_mod_ver_requires_eq
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
