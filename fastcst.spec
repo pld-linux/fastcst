@@ -13,7 +13,7 @@ BuildRequires:	ruby-devel
 Requires:	ruby-RMail
 Requires:	ruby-guid
 Requires:	ruby-pluginfactory
-%ruby_mod_ver_requires_eq
+%{?ruby_mod_ver_requires_eq}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
