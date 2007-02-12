@@ -1,5 +1,5 @@
 Summary:	Fast Changeset Tool
-Summary(pl.UTF-8):   Fast Changeset Tool - narzędzie do zestawów zmian
+Summary(pl.UTF-8):	Fast Changeset Tool - narzędzie do zestawów zmian
 Name:		fastcst
 Version:	0.6.5
 Release:	2
