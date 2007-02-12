@@ -1,5 +1,5 @@
 Summary:	Fast Changeset Tool
-Summary(pl):	Fast Changeset Tool - narz阣zie do zestaw體 zmian
+Summary(pl.UTF-8):   Fast Changeset Tool - narz臋dzie do zestaw贸w zmian
 Name:		fastcst
 Version:	0.6.5
 Release:	2
@@ -19,9 +19,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 A fast suffix-tree based changeset tool.
 
-%description -l pl
-Szybkie narz阣zie do zestaw體 zmian oparte na drzewie przyrostk體
-(suffiks體).
+%description -l pl.UTF-8
+Szybkie narz臋dzie do zestaw贸w zmian oparte na drzewie przyrostk贸w
+(suffiks贸w).
 
 %prep
 %setup -q
